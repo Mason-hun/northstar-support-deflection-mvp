@@ -1,0 +1,20 @@
+RETURN_ID,ORDER_ID,CUSTOMER_NAME,PRODUCT_NAME,PRODUCT_CATEGORY,PURCHASE_DATE,DELIVERY_DATE,RETURN_REQUEST_DATE,RETURN REASON,REFUND STATUS
+1001,110,Grace Wanjiku,Boxers,Clothing,6/5/2026,6/9/2026,6/12/2026,Changed my mind,Pending
+1002,300,Amina Otieno,Fridge,Electronics,6/8/2026,6/13/2026,6/20/2026,Product not suitable,Pending
+1003,150,Mercy Achieng,Couch,Furniture,6/10/2026,6/14/2026,6/18/2026,Changed my mind,Pending
+1004,130,Susan Njoki,T-Shirt,Clothing,6/12/2026,6/16/2026,6/19/2026,Wrong size,Pending
+1005,240,Eric Maina,Microwave,Electronics,6/15/2026,6/19/2026,6/25/2026,Product defective,Pending
+1006,450,Caroline Wairimu,Dining Table,Furniture,6/18/2026,6/22/2026,6/27/2026,Damaged on delivery,Pending
+1007,730,Nuru Ali,Jeans,Clothing,6/20/2026,6/24/2026,6/29/2026,Wrong size,Processing
+1008,930,Phillip Eric,Television,Electronics,6/22/2026,6/27/2026,7/5/2026,Picture quality issue,Processing
+1009,880,Esther Chebet,Office Chair,Furniture,6/25/2026,6/29/2026,7/3/2026,Uncomfortable,Processing
+1010,231,Daniel Kiptoo,Jacket,Clothing,6/27/2026,7/1/2026,7/6/2026,Changed my mind,Refunded
+1011,674,Faith Njeri,Refrigerator,Electronics,6/30/2026,7/4/2026,7/15/2026,Product defective,Refunded
+1012,942,Peter Ochieng,Wardrobe,Furniture,7/2/2026,7/6/2026,7/10/2026,Damaged on delivery,Refunded
+1013,578,Irene Wambui,Sneakers,Clothing,7/5/2026,7/9/2026,7/17/2026,Return window expired,Not Eligible
+1014,358,IYvone Chepkoech,Laptop,Electronics,7/8/2026,7/12/2026,8/2/2026,Return window expired,Not Eligible
+1015,468,Said Ali,Bed Frame,Furniture,7/10/2026,7/14/2026,7/23/2026,Return window expired,Not Eligible
+1016,324,Joseph Kariuki,Dress,Clothing,7/13/2026,7/17/2026,7/18/2026,Wrong size,Pending
+1017,562,John Katana,Washing Machine,Electronics,7/15/2026,7/20/2026,7/30/2026,Product defective,Pending
+1018,697,Iyan Mohamed,Bookshelf,Furniture,7/18/2026,7/22/2026,7/28/2026,Changed my mind,Pending
+1019,455,Mariam Hassan,Hoodie,Clothing,7/20/2026,7/24/2026,7/29/2026,Wrong size,Processing

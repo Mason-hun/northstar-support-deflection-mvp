@@ -1,0 +1,21 @@
+ORDER_ID,CUSTOMER_NAME,STATUS,ORDER_DATE,EXPECTED DELIVERY
+110,Grace Wanjiku,Shipped,6/5/2026,6/14/2026
+300,Amina Otieno,Processing,6/8/2026,6/17/2026
+150,Mercy Achieng,Shipped,6/10/2026,6/18/2026
+130,Susan Njoki,Shipped,6/12/2026,6/21/2026
+240,Eric Maina,processing,6/15/2026,6/23/2026
+450,Caroline Wairimu,Shipped,6/18/2026,6/26/2026
+730,Nuru Ali,Shipped,6/20/2026,6/28/2026
+930,Phillip Eric,processing,6/22/2026,6/30/2026
+880,Esther Chebet,Processing,6/25/2026,7/3/2026
+231,Daniel Kiptoo,Shipped,6/27/2026,7/5/2026
+674,Faith Njeri,Processing,6/30/2026,7/8/2026
+942,Peter Ochieng,Processing,7/2/2026,7/10/2026
+578,Irene Wambui,Shipped,7/5/2026,7/13/2026
+358,IYvone Chepkoech,Processing,7/8/2026,7/16/2026
+468,Said Ali,Shipped,7/10/2026,7/18/2026
+324,Joseph Kariuki,Processing,7/13/2026,7/21/2026
+562,John Katana,Shipped,7/15/2026,7/24/2026
+697,Iyan Mohamed,Shipped,7/18/2026,7/27/2026
+455,Mariam Hassan,Shipped,7/20/2026,7/29/2026
+,,,7/22/2026,7/31/2026
