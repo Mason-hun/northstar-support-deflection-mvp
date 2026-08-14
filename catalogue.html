@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Catalogue · Northstar Retail Co.</title>
+  <!-- <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='18' fill='%23A81D34'/><path d='M50 12 58 42 88 50 58 58 50 88 42 58 12 50 42 42Z' fill='white'/></svg>"> -->
+   <link rel="icon" href="img/north-star.png" type="image/x-icon">
+  <link rel="stylesheet" href="css/style.css">
+  <script defer src="js/data.js"></script>
+  <script defer src="js/app.js"></script>
+</head>
+<body data-page="catalogue">
+  <a class="skip" href="#main">Skip to content</a>
+  <div class="ticker" aria-hidden="true"><div class="ticker-track" id="ticker-track"></div></div>
+
+  <!-- SHARED HEADER (identical across pages; only aria-current moves) -->
+  <header class="site-head" id="site-head">
+    <div class="container head-row">
+      <a class="logo" href="index.html"><img src="img/north-star.png" alt="custom icon" class="custom-logosean"><!-- <span class="logo-mark"><svg viewBox="0 0 24 24" fill="#fff"><path d="M12 2l2.2 7.8L22 12l-7.8 2.2L12 22l-2.2-7.8L2 12l7.8-2.2z"/></svg></span> --><span class="logo-text">Northstar <small>RETAIL CO.</small></span></a>
+      <nav class="site-nav" id="site-nav" aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="catalogue.html" aria-current="page">Catalogue</a>
+        <a href="tracking.html">Track Order</a>
+        <a href="returns.html">Returns &amp; Refunds</a>
+      </nav>
+      <div class="head-actions">
+        <a class="cart-btn" href="checkout.html" aria-label="Cart">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M6 8h12l1 12H5L6 8z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>
+          <span class="cart-label">Cart</span><span class="cart-badge" data-cart-count>0</span>
+        </a>
+        <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Menu">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <div class="container">
+      <div class="page-hero reveal">
+        <span class="eyebrow">Catalogue - Fall 2026 drop</span>
+        <h1>The shelf.</h1>
+        <p>Six everyday essentials. Free shipping over $75 - and every order is trackable to the metre.</p>
+      </div>
+
+      <!-- Filter chips + sort, wired in initCatalogue() -->
+      <div class="toolbar reveal">
+        <div class="chips" role="group" aria-label="Filter by category">
+          <button class="chip active" data-cat="All">All</button>
+          <button class="chip" data-cat="Apparel">Apparel</button>
+          <button class="chip" data-cat="Audio">Audio</button>
+          <button class="chip" data-cat="Footwear">Footwear</button>
+          <button class="chip" data-cat="Accessories">Accessories</button>
+        </div>
+        <div class="tool-right">
+          <span class="mono" id="p-count">6 items</span>
+          <select class="input" id="sort-select" aria-label="Sort products">
+            <option value="featured">Featured</option>
+            <option value="asc">Price: low → high</option>
+            <option value="desc">Price: high → low</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Product cards injected here from PRODUCTS in data.js -->
+      <div class="product-grid" id="product-grid" style="padding-bottom:60px"></div>
+    </div>
+  </main>
+
+  <!-- SHARED FOOTER -->
+  <footer class="site-foot">
+    <div class="container foot-grid">
+      <div><a class="logo" href="index.html"><img src="img/north-star.png" alt="custom icon" class="custom-logosean"><!-- <span class="logo-mark"><svg viewBox="0 0 24 24" fill="#fff"><path d="M12 2l2.2 7.8L22 12l-7.8 2.2L12 22l-2.2-7.8L2 12l7.8-2.2z"/></svg></span> --><span class="logo-text">Northstar <small>RETAIL CO.</small></span></a><p class="foot-blurb">A demo storefront &amp; support-deflection suite.</p></div>
+      <nav aria-label="Shop"><h4>Shop</h4><a href="catalogue.html">Catalogue</a><a href="checkout.html">Checkout</a></nav>
+      <nav aria-label="Support"><h4>Support</h4><a href="tracking.html">Track order</a><a href="returns.html">Returns &amp; refunds</a></nav>
+      <div><h4>The North Wind — monthly drops</h4><form class="foot-news" id="news-form"><input class="input" type="email" placeholder="you@example.com" required aria-label="Email address"><button class="btn btn-primary btn-sm" type="submit">Join</button></form></div>
+    </div>
+    <div class="container foot-bar"><span>© <span data-year>2026</span> Northstar Retail Co.</span><!-- <span>Vanilla HTML · CSS · JS — zero frameworks</span> --></div>
+  </footer>
+</body>
+</html>
