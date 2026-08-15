@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Instant Support &amp; Shopping · Northstar Retail Co.</title>
+  <meta name="description" content="Track packages, print return labels and shop — all without a hold queue.">
+  <!-- <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='18' fill='%23A81D34'/><path d='M50 12 58 42 88 50 58 58 50 88 42 58 12 50 42 42Z' fill='white'/></svg>"> -->
+   <link rel="icon" href="img/north-star.png" type="image/x-icon">
+  <link rel="stylesheet" href="css/style.css">
+  <script defer src="js/data.js"></script>
+  <script defer src="js/app.js"></script>
+</head>
+<body data-page="home">
+  <a class="skip" href="#main">Skip to content</a>
+
+  <!-- Utility ticker: shipping/support feed, populated from data.js -->
+  <div class="ticker" aria-hidden="true"><div class="ticker-track" id="ticker-track"></div></div>
+
+  <!-- ============ SHARED HEADER ============ -->
+  <header class="site-head" id="site-head">
+    <div class="container head-row">
+      <a class="logo" href="index.html"><img src="img/north-star.png" alt="custom icon" class="custom-logosean">
+        <!-- <span class="logo-mark"><svg viewBox="0 0 24 24" fill="#fff"><path d="M12 2l2.2 7.8L22 12l-7.8 2.2L12 22l-2.2-7.8L2 12l7.8-2.2z"/></svg> --></span>
+        <span class="logo-text">Northstar <small>RETAIL CO.</small></span>
+      </a>
+      <nav class="site-nav" id="site-nav" aria-label="Primary">
+        <a href="index.html" aria-current="page">Home</a>
+        <a href="catalogue.html">Catalogue</a>
+        <a href="tracking.html">Track Order</a>
+        <a href="returns.html">Returns &amp; Refunds</a>
+      </nav>
+      <div class="head-actions">
+        <a class="cart-btn" href="checkout.html" aria-label="Cart">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M6 8h12l1 12H5L6 8z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>
+          <span class="cart-label">Cart</span>
+          <span class="cart-badge" data-cart-count>0</span>
+        </a>
+        <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Menu">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- ============ HERO ============ -->
+    <section class="hero">
+      <!-- <svg class="hero-star" viewBox="0 0 120 120" fill="currentColor" aria-hidden="true"><path d="M60 0l8 44 44 8-44 8-8 44-8-44-44-8 44-8z"/></svg> -->
+      <div class="container hero-grid">
+        <div class="reveal">
+          <span class="eyebrow">Storefront + Support Desk - one tab</span>
+          <h1>Instant Customer Support &amp; <span class="mark">Shopping.</span></h1>
+          <p class="hero-sub">Track packages, print return labels and check out - no account, no hold music. Northstar resolves 9 out of 10 service requests right here on the page.</p>
+          <div class="hero-ctas">
+            <a class="btn btn-primary" href="tracking.html">Track My Order →</a>
+            <a class="btn btn-outline" href="returns.html">Start a Return</a>
+          </div>
+          <p class="hero-meta">NO LOGIN · ORDER ID LIVES IN YOUR CONFIRMATION EMAIL · OPEN 24/7</p>
+          <!-- <div class="hero-proof">
+            <div><strong>8 sec</strong><span>average lookup</span></div>
+            <div><strong>93%</strong><span>resolved instantly</span></div>
+            <div><strong>30 days</strong><span>return window</span></div>
+          </div> -->
+        </div>
+
+        <!-- Animated live look-up demo card -->
+        <div class="hero-demo reveal" style="--d:.15s">
+          <div class="live-card card">
+            <div class="live-head"><span class="pulse-dot"></span><span class="mono">LIVE LOOK-UP · #NST-1001</span></div>
+            <div class="live-row">
+              <div><span class="live-label">Status</span><strong>In Transit</strong></div>
+              <span class="status-chip chip-move">On schedule</span>
+            </div>
+            <div class="live-bar"><i></i></div>
+            <p class="live-meta mono">FEDEX · EST. 2 DAYS · LAST SCAN: COLUMBUS HUB</p>
+            <div class="route" aria-hidden="true">
+              <span class="route-node"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M3 9l9-5 9 5v11H3z"/><path d="M9 20v-7h6v7"/></svg></span>
+              <span class="route-line"><i class="route-truck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M2 6h12v10H2zM14 10h4l3 3v3h-7z"/><circle cx="6.5" cy="17.5" r="1.6"/><circle cx="17" cy="17.5" r="1.6"/></svg></i></span>
+              <span class="route-node"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M3 11l9-7 9 7v9h-6v-6h-6v6H3z"/></svg></span>
+            </div>
+          </div>
+          <div class="float-chip card"><span class="ok-ico">✓</span>Return label issued <small>· 12s ago</small></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FEATURE GRID ============ -->
+    <section class="section" style="padding-top:36px">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Self-serve, done properly</span>
+          <h2>Three doors in, zero tickets out.</h2>
+        </div>
+        <div class="feature-grid">
+          <article class="card feature-card reveal">
+            <div class="feature-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M2 6h12v10H2zM14 10h4l3 3v3h-7z"/><circle cx="6.5" cy="17.5" r="1.6"/><circle cx="17" cy="17.5" r="1.6"/></svg></div>
+            <h3>Fast Shipping Status</h3>
+            <p>Live carrier lookups with a four-stage tracker. Find your package in about eight seconds.</p>
+            <div class="mini-track" aria-hidden="true"><i class="on"></i><b class="on"></b><i class="on"></i><b class="on"></b><i class="now"></i><b></b><i></i></div>
+            <a class="link-arrow" href="tracking.html">Track a package <span>→</span></a>
+          </article>
+          <article class="card feature-card reveal" style="--d:.1s">
+            <div class="feature-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 3-6.7"/><path d="M3 4v5h5"/></svg></div>
+            <h3>Hassle-Free Returns</h3>
+            <p>A guided flow checks your window and prints a label on the spot. Refunds in 3–5 business days.</p>
+            <ul class="tick-list"><li>30-day window</li><li>Instant printable label</li><li>No agent required</li></ul>
+            <a class="link-arrow" href="returns.html">Start a return <span>→</span></a>
+          </article>
+          <article class="card feature-card reveal" style="--d:.2s">
+            <div class="feature-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M4 7h16v13H4z"/><path d="M8 7a4 4 0 0 1 8 0"/></svg></div>
+            <h3>Browse Products</h3>
+            <p>Six everyday essentials, restocked weekly. Add to cart and mock-checkout in under a minute.</p>
+            <div class="thumb-row" id="feature-thumbs" aria-hidden="true"></div>
+            <a class="link-arrow" href="catalogue.html">Browse the catalogue <span>→</span></a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ STATS BAND ============ -->
+    <!-- <section class="section" style="padding-top:8px">
+      <div class="container">
+        <div class="stats-band reveal">
+          <div class="stat"><strong><span data-count="12483">0</span></strong><span>orders tracked this month</span></div>
+          <div class="stat"><strong><span data-count="93">0</span>%</strong><span>returns resolved instantly</span></div>
+          <div class="stat"><strong><span data-count="8">0</span>s</strong><span>average lookup time</span></div>
+          <div class="stat"><strong><span data-count="0">0</span> min</strong><span>spent on hold, ever</span></div>
+        </div>
+      </div>
+    </section> -->
+
+    <!-- ============ PRODUCT PICKS (rendered from data.js) ============ -->
+    <section class="section" style="padding-top:14px">
+      <div class="container">
+        <div class="row-between section-head reveal">
+          <div><span class="eyebrow">Fresh off the shelf</span><h2>This week's movers.</h2></div>
+          <a class="link-arrow" href="catalogue.html">View full catalogue <span>→</span></a>
+        </div>
+        <div class="product-grid" id="home-picks"></div>
+      </div>
+    </section>
+
+    <!-- ============ CLOSING CTA ============ -->
+    <section class="section" style="padding-top:10px">
+      <div class="container">
+        <div class="card reveal" style="padding:44px 40px;display:flex;justify-content:space-between;align-items:center;gap:26px;flex-wrap:wrap;border-top:3px solid var(--brand)">
+          <div>
+            <h2 style="font-size:1.5rem;font-weight:800;letter-spacing:-0.02em">Still need a human?</h2>
+            <p style="color:var(--muted);max-width:440px;margin-top:6px">Our crew answers within the hour. But 98% of the time, you won't need them.</p>
+          </div>
+          <div style="display:flex;gap:12px;flex-wrap:wrap">
+            <a class="btn btn-primary" href="tracking.html">Track My Order</a>
+            <a class="btn btn-outline" href="returns.html">Start a Return</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ SHARED FOOTER ============ -->
+  <footer class="site-foot">
+    <div class="container foot-grid">
+      <div>
+        <a class="logo" href="index.html"><img src="img/north-star.png" alt="custom icon" class="custom-logosean"><!-- <span class="logo-mark"><svg viewBox="0 0 24 24" fill="#fff"><path d="M12 2l2.2 7.8L22 12l-7.8 2.2L12 22l-2.2-7.8L2 12l7.8-2.2z"/></svg></span> --><span class="logo-text">Northstar <small>RETAIL CO.</small></span></a>
+        <p class="foot-blurb">A demo storefront &amp; support-deflection suite. Every lookup here is one less ticket in a queue.</p>
+      </div>
+      <nav aria-label="Shop"><h4>Shop</h4><a href="catalogue.html">Catalogue</a><a href="checkout.html">Checkout</a></nav>
+      <nav aria-label="Support"><h4>Support</h4><a href="tracking.html">Track order</a><a href="returns.html">Returns &amp; refunds</a><a href="tracking.html">Tracking FAQ</a></nav>
+      <div>
+        <h4>The North Wind - monthly drops</h4>
+        <form class="foot-news" id="news-form">
+          <input class="input" type="email" placeholder="you@example.com" required aria-label="Email address">
+          <button class="btn btn-primary btn-sm" type="submit">Join</button>
+        </form>
+      </div>
+    </div>
+    <div class="container foot-bar">
+      <span>© <span data-year>2026</span> Northstar Retail Co.<!--  — demo build, no real orders --></span>
+      <!-- <span>Vanilla HTML · CSS · JS — zero frameworks</span> -->
+    </div>
+  </footer>
+</body>
+</html>

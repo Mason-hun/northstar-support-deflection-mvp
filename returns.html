@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Returns &amp; Refunds · Northstar Retail Co.</title>
+  <!-- <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='18' fill='%23A81D34'/><path d='M50 12 58 42 88 50 58 58 50 88 42 58 12 50 42 42Z' fill='white'/></svg>"> -->
+   <link rel="icon" href="img/north-star.png" type="image/x-icon">
+  <link rel="stylesheet" href="css/style.css">
+  <script defer src="js/data.js"></script>
+  <script defer src="js/app.js"></script>
+</head>
+<body data-page="returns">
+  <a class="skip" href="#main">Skip to content</a>
+  <div class="ticker" aria-hidden="true"><div class="ticker-track" id="ticker-track"></div></div>
+
+  <!-- SHARED HEADER -->
+  <header class="site-head" id="site-head">
+    <div class="container head-row">
+      <a class="logo" href="index.html"><img src="img/north-star.png" alt="custom icon" class="custom-logosean"><!-- <span class="logo-mark"><svg viewBox="0 0 24 24" fill="#fff"><path d="M12 2l2.2 7.8L22 12l-7.8 2.2L12 22l-2.2-7.8L2 12l7.8-2.2z"/></svg></span> --><span class="logo-text">Northstar <small>RETAIL CO.</small></span></a>
+      <nav class="site-nav" id="site-nav" aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="catalogue.html">Catalogue</a>
+        <a href="tracking.html">Track Order</a>
+        <a href="returns.html" aria-current="page">Returns &amp; Refunds</a>
+      </nav>
+      <div class="head-actions">
+        <a class="cart-btn" href="checkout.html" aria-label="Cart">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M6 8h12l1 12H5L6 8z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>
+          <span class="cart-label">Cart</span><span class="cart-badge" data-cart-count>0</span>
+        </a>
+        <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Menu">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <div class="container">
+      <div class="page-hero reveal">
+        <span class="eyebrow">Core deflection · guided flow</span>
+        <h1>Start a return.</h1>
+        <p>Answer two questions. If you're inside the 30-day window, your shipping label and refund estimate print on the spot.</p>
+      </div>
+
+      <div class="returns-grid">
+        <!-- ============ WIZARD ============ -->
+        <section class="card wizard-card reveal" aria-label="Return wizard">
+          <ol class="wsteps">
+            <li class="wstep active" data-ws="1"><span class="wnum">1</span>Details</li>
+            <li class="wstep" data-ws="2"><span class="wnum">2</span>Eligibility</li>
+            <li class="wstep" data-ws="3"><span class="wnum">3</span>Outcome</li>
+          </ol>
+
+          <!-- STEP 1 — order + reason -->
+          <form class="wz-panel" data-step="1" id="return-step1">
+            <div class="field">
+              <label for="ret-order">Order ID</label>
+              <input class="input mono" id="ret-order" type="text" placeholder="e.g. NST-1001" required>
+            </div>
+            <div class="field">
+              <label for="ret-reason">Reason for return</label>
+              <select class="input" id="ret-reason" required>
+                <option value="Wrong Size">Wrong Size</option>
+                <option value="Damaged Item">Damaged Item</option>
+                <option value="Changed Mind">Changed Mind</option>
+                <option value="Arrived Late">Arrived Late</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+            <div class="banner error" id="ret-error" hidden>
+              <div><h3>Order not found</h3><p>Check the ID in your confirmation email - or try a demo order: <b class="mono">NST-1001</b> (eligible) or <b class="mono">NST-1004</b> (outside window).</p></div>
+            </div>
+            <button class="btn btn-primary" type="submit" style="margin-top:10px">Check eligibility →</button>
+          </form>
+
+          <!-- STEP 2 — animated rules-engine check (rows injected by JS) -->
+          <section class="wz-panel" data-step="2" hidden>
+            <span class="eyebrow">Running the rules engine…</span>
+            <ul class="check-list" id="check-list"></ul>
+          </section>
+
+          <!-- STEP 3 — outcome injected by JS (label + refund OR policy deflection) -->
+          <section class="wz-panel" data-step="3" hidden>
+            <div id="step3-outcome"></div>
+          </section>
+        </section>
+
+        <!-- ============ POLICY SIDEBAR ============ -->
+        <aside class="card policy-aside reveal" style="--d:.1s" aria-label="Return policy">
+          <h2>Return policy</h2>
+          <dl>
+            <div><dt>Return window</dt><dd>30 days</dd></div>
+            <div><dt>Condition</dt><dd>Unworn, tags on</dd></div>
+            <div><dt>Refund timing</dt><dd>3–5 business days</dd></div>
+            <div><dt>Damaged items</dt><dd>Free label, fast refund</dd></div>
+            <div><dt>Restocking fee</dt><dd>None, ever</dd></div>
+          </dl>
+          <footer><!-- Ruled entirely by <span class="mono">RETURN_RULES</span> in <span class="mono">data.js</span> — tweak the window there and this flow adapts.  -->Truly stuck? <a class="link-arrow" href="mailto:support@northstar.co">support@northstar.co <span>→</span></a></footer>
+        </aside>
+      </div>
+    </div>
+  </main>
+
+  <!-- SHARED FOOTER -->
+  <footer class="site-foot">
+    <div class="container foot-grid">
+      <div><a class="logo" href="index.html"><img src="img/north-star.png" alt="custom icon" class="custom-logosean"><!-- <span class="logo-mark"><svg viewBox="0 0 24 24" fill="#fff"><path d="M12 2l2.2 7.8L22 12l-7.8 2.2L12 22l-2.2-7.8L2 12l7.8-2.2z"/></svg></span> --><span class="logo-text">Northstar <small>RETAIL CO.</small></span></a><p class="foot-blurb">A demo storefront &amp; support-deflection suite.</p></div>
+      <nav aria-label="Shop"><h4>Shop</h4><a href="catalogue.html">Catalogue</a><a href="checkout.html">Checkout</a></nav>
+      <nav aria-label="Support"><h4>Support</h4><a href="tracking.html">Track order</a><a href="returns.html">Returns &amp; refunds</a></nav>
+      <div><h4>The North Wind - monthly drops</h4><form class="foot-news" id="news-form"><input class="input" type="email" placeholder="you@example.com" required aria-label="Email address"><button class="btn btn-primary btn-sm" type="submit">Join</button></form></div>
+    </div>
+    <div class="container foot-bar"><span>© <span data-year>2026</span> Northstar Retail Co.</span><!-- <span>Vanilla HTML · CSS · JS — zero frameworks</span> --></div>
+  </footer>
+</body>
+</html>
